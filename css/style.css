@@ -26,9 +26,25 @@ section { scroll-margin-top: 72px; }
 .hero-slide.carousel-item-prev {
   display: flex;
 }
-.hero-one   { background: linear-gradient(110deg, #10243a 0%, #145b91 100%); }
-.hero-two   { background: linear-gradient(110deg, #12334c 0%, #087e8b 100%); }
-.hero-three { background: linear-gradient(110deg, #10243a, #176b85); }
+.hero-one   { background-image:
+    linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+    url("../images/Background-slide.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+.hero-two   { background-image:
+    linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+    url("../images/Abstract\ Blue\ Technology\ Waves.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+.hero-three { background-image:
+    linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+    url("../images/Innovation\ and\ Technology.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
 .hero-content { padding-top: 70px; padding-bottom: 70px; }
 .hero-content h1 { font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 700; line-height: 1.15; }
 .small-label { color: #73e2ff; letter-spacing: 2px; }
@@ -49,7 +65,7 @@ section { scroll-margin-top: 72px; }
 .services-section { background: var(--light-bg); }
 .section-heading { margin-bottom: 35px; }
 .service-card { border: 0; border-radius: 12px; box-shadow: 0 5px 20px rgba(16, 36, 58, .08); transition: transform .2s; }
-.service-card:hover { transform: translateY(-4px); }
+.service-card:hover { transform: translateY(-5px); }
 .service-card .card-body { padding: 28px; }
 .service-icon { color: var(--main-blue); font-size: 2.2rem; font-weight: bold; margin-bottom: 16px; }
 .service-card .card-title { color: var(--dark-blue); font-weight: bold; }
@@ -96,10 +112,50 @@ section { scroll-margin-top: 72px; }
 /* About section */
 #about .row { align-items: center; }
 #about .col-12 { min-width: 0; }
+#about .about-content {
+  border: 1px solid #e3ebf3;
+  border-radius: 12px;
+  padding: 35px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 20px rgba(16, 36, 58, 0.08);
+  height: 100%;
+}
 
-/* Tablet and mobile layout */
+/* Explore Our Services button animation */
+#about .about-content .btn-info {
+    background-color: #0dcaf0;
+    border: 1px solid #0dcaf0;
+    color: #10243a;
+    border-radius: 7px;
+    padding: 10px 18px;
+    transition: all 0.3s ease;
+}
+
+#about .about-content .btn-info:hover {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(13, 110, 253, 0.25);
+}
+
+#about .about-content .btn-info:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 3px 8px rgba(13, 110, 253, 0.2);
+}
+/* end about section  */
+
+/* Tablet Layout */
+@media (max-width: 768px) and (max-width: 991.98px){
+  .hero-three{ background-position: 65% center;}
+}
+
+/* mobile layout */
 @media (max-width: 767.98px) {
   .hero-slide { min-height: 410px; }
+  .hero-one{ background-position: 95% center;}
+  .hero-two{ background-position: 95% center;}
+  .hero-three{ background-position: 95% center;}
   .hero-content { padding: 55px 35px; }
   .section-space { padding: 55px 0; }
   .nav-link { margin-left: 0; }
@@ -110,4 +166,44 @@ section { scroll-margin-top: 72px; }
   #about .about-image { padding: 24px !important; margin-bottom: 10px; }
   #about .section-title { font-size: 1.8rem; line-height: 1.3; }
   #about p { overflow-wrap: break-word; }
+}
+
+
+/* Send Message button animation */
+#contactForm .btn-info {
+    background-color: #0dcaf0;
+    border: 1px solid #0dcaf0;
+    color: #10243a;
+    border-radius: 7px;
+    padding: 11px 22px;
+    transition: all 0.3s ease;
+}
+
+#contactForm .btn-info:hover {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(13, 110, 253, 0.25);
+}
+
+#contactForm .btn-info:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 3px 8px rgba(13, 110, 253, 0.2);
+}
+
+/* Slide the arrow on hover */
+#contactForm .btn-info i {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+#contactForm .btn-info:hover i {
+    transform: translateX(5px);
+}
+
+/* Keyboard accessibility */
+#contactForm .btn-info:focus-visible {
+    outline: 3px solid rgba(13, 110, 253, 0.4);
+    outline-offset: 3px;
 }
