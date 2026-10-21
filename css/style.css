@@ -208,3 +208,29 @@ section { scroll-margin-top: 72px; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { animation: none; }
 }
+
+/* Footer social media links */
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #0d6efd;
+    font-size: 1.7rem;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.social-links a:focus-visible {
+    outline: 2px solid #73e2ff;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
